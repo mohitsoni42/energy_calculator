@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Human Energy Tracker</title>
+</head>
+<body>
+
+<div id="app">
+  <h1>Human Energy Tracker</h1>
+  <div class="form-container">
+    <label for="ageInput">Enter Your Age:</label>
+    <input type="number" id="ageInput" min="1" required>
+    <button onclick="guideMe()">Guide Me</button>
+    <button onclick="showMyEnergy()">Show My Used Energy</button>
+  </div>
+
+  <div id="guideMeSection" class="result-section">
+    <h2>Guide Me</h2>
+    <p id="totalEnergy"></p>
+    <ul id="energyTasks"></ul>
+  </div>
+
+  <div id="showMyEnergySection" class="result-section">
+    <h2>Show My Used Energy</h2>
+    <div id="activityForm" style="display:none;">
+      <label for="activitySelect">Select Activity:</label>
+      <select id="activitySelect">
+        <option value="exercise">Exercise</option>
+        <option value="breakfast">Breakfast</option>
+        <option value="socialMedia">Social Media</option>
+        <option value="work">Work</option>
+        <option value="lunch">Lunch</option>
+        <option value="relax">Relax</option>
+        <option value="sports">Sports</option>
+        <option value="travel">Travel</option>
+        <option value="dinner">Dinner</option>
+        <option value="withPhone">With Phone</option>
+        <option value="onBooks">On Books</option>
+      </select>
+      <label for="timeSpentInput">Time Spent (in minutes):</label>
+      <input type="number" id="timeSpentInput" min="0" required>
+      <button onclick="calculateUsedEnergy()">Calculate</button>
+    </div>
+    <p id="usedEnergy"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
